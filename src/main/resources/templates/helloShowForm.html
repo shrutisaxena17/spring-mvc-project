@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Form</title>
+    <link rel="stylesheet" th:href="@{/demo.css}">
+</head>
+<body>
+<!--
+<form th:action="@{/processForm}" method="get">
+  <input type="number" name="studentRoll" placeholder="Enter Roll Number" class="form-input">
+    <br>
+  <input type="text" name="studentName" placeholder="Enter the Name" class="form-input">
+    <br>
+  <input type="text" name="studentCourse" placeholder="Enter the Course" class="form-input">
+    <br>
+  <input type="number" name="studentAge" placeholder="Enter the Age" class="form-input">
+    <br>
+  <input type="submit" class="form-submit"/>
+</form>
+-->
+<!--
+<form th:action="@{/processFormVersionTwo}" method="get">
+    <input type="number" name="studentRoll" placeholder="Enter Roll Number" class="form-input">
+    <br>
+    <input type="text" name="studentName" placeholder="Enter the Name" class="form-input">
+    <br>
+    <input type="text" name="studentCourse" placeholder="Enter the Course" class="form-input">
+    <br>
+    <input type="number" name="studentAge" placeholder="Enter the Age" class="form-input">
+    <br>
+    <input type="submit" class="form-submit"/>
+</form>
+--><form th:action="@{/processFormVersionThree}" method="post">
+    <input type="number" name="studentRoll" placeholder="Enter Roll Number" class="form-input">
+    <br>
+    <input type="text" name="studentName" placeholder="Enter the Name" class="form-input">
+    <br>
+    <input type="text" name="studentCourse" placeholder="Enter the Course" class="form-input">
+    <br>
+    <input type="number" name="studentAge" placeholder="Enter the Age" class="form-input">
+    <br>
+    <input type="submit" class="form-submit"/>
+</form>
+
+</body>
+</html>

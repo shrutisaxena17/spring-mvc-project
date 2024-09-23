@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Process Student Information</title>
+</head>
+<body>
+Student Name: <span th:text="${student.firstName}+' ' +${student.lastName}"/>
+<br>
+Country:<span th:text="${student.country}"/>
+<br>
+Programming Language:<span th:text="${student.programmingLanguage}"/>
+<br>
+Operating Systems:<span th:text="${student.operatingSystem}"/>
+</body>
+</html>

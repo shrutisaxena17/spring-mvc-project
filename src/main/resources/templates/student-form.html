@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" th:href="@{/demo.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+</head>
+<body>
+<h3>Student Registration form</h3>
+<form th:action="@{/processStudentForm}" th:object="${student}" method="post">
+First Name:  <input type="text" th:field="*{firstName}" class="form-input">
+  <br>
+Last Name: <input type="text"  th:field="*{lastName}" class="form-input">
+  <br>
+Country:
+  <select th:field="*{country}" class="form-input">
+    <option th:each="tempCountry:${countries}" th:value="${tempCountry}" th:text="${tempCountry}"/>
+  </select>
+  <br>
+  Programming Language:
+  <input type="radio" th:field="*{programmingLanguage}" th:value="Java" class="form-input"/>Java
+  <input type="radio" th:field="*{programmingLanguage}" th:value="Python" class="form-input"/>Python
+  <input type="radio" th:field="*{programmingLanguage}" th:value="C" class="form-input"/>C
+  <br>
+  <input type="checkbox" th:field="*{operatingSystem}" th:value="Linux" class="form-input"/>Linux
+  <input type="checkbox" th:field="*{operatingSystem}" th:value="MacOS" class="form-input"/>Mac OS
+  <input type="checkbox" th:field="*{operatingSystem}" th:value="Windows" class="form-input"/>Windows
+  <br>
+  <input type="submit" value="submit" class="form-submit">
+</form>
+</body>
+</html>
